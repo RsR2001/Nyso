@@ -1,0 +1,200 @@
+@charset "UTF-8";
+:root{
+  --clr-primary:#2962ff;
+  --clr-primary-hover:#0d47a1;
+  --clr-gray-med:#78909c;
+  --clr-gray-light:#cfd8dc;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  align-items: center;
+  background-color: #181920;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--clr-gray-light);
+}
+
+body {
+  font-family:'Open Sans', sans-serif;
+  background-image:url("https://img.freepik.com/fotos-premium/papel-branco-com-padrao-de-linha-de-grade-para-plano-de-fundo-fechar_64749-4970.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}         
+          
+input {
+  margin-top: 10px;
+  background-color: #252A34;
+  border: 3px #000000 solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: whitesmoke;
+} 
+
+.btn-add{
+  border: 2px #000000 dashed;
+  border-radius: 5px;
+  background-color: #252A34;
+  color: white;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+} 
+
+.btn-add:active,
+.btn-add:hover {
+  background-color: var(--clr-primary-hover);
+}
+          
+
+           
+h1 {
+  margin: 0px 0px 5px 5px;
+  text-align: center;
+  color:	#f8f8f8;      
+}
+
+h2 {
+  margin: 0px 0px 7px 7px;
+  text-align: center;
+  color:	#080707;
+}
+
+footer {
+  border-top: 2px solid var(--clr-gray-light);
+  background-color: #181920;
+  opacity: 0.5;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  bottom: 0;
+  position: fixed;
+  padding: 3px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  margin: 2em 0em;
+  background-image: url("https://i.imgur.com/xSuM1qa.png");
+  }
+
+.table-shadow {
+  resize :horizontal;
+  overflow: auto;
+  border-radius: 5px;
+  border: 2px #000000 solid;
+  width: 5em;
+  height: 3em;
+  margin: 5px auto;
+  background-color: whitesmoke;
+  transition: all 100ms ease-in-out;
+}
+
+.table-shadow:nth-child(odd) {
+  box-shadow: 0px 0px 10px var(--clr-gray-med);
+}
+  
+.table-shadow:nth-child(even) {
+  box-shadow: inset 0px 0px 10px var(--clr-gray-med);
+}
+  
+.table-shadow:hover {
+  transform: scale(1.2);
+}
+/*===================MODAL INFO=================================*/
+#modalInfo {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#modalConteudo {
+  background-color: #fefefe;
+  margin: auto;
+  width: 66%;
+  height: 50%;
+  border-radius: 5px;
+  border: 2px #000000 double; 
+  overflow: auto;
+}
+
+#modalHeader {
+  align-items: center;
+  background-color: #252A34;
+  padding-bottom: 23px;
+  border-bottom: 2px solid var(--clr-gray-light);
+  color: white;
+}
+#modalMain {
+  align-items: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+#modalTxt1{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
+  padding-inline: 115px;
+  padding-block: 5px;
+}
+#modalTxt2{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
+  padding-inline: 134px;
+}
+#modalTxt3{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
+  padding-inline: 89px;
+}
+#modalTxt4{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
+  padding-inline: 10px;
+  padding-block: 7px;
+
+}
+select{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
+  background-color: #252A34;
+  color: whitesmoke;
+  padding-block: 7px;
+}
+
+/* The Close Button */
+#X {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px #aaaaaa dashed;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+#X:hover,
+#X:focus {
+  color: rgb(242, 11, 11);
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px rgb(242, 11, 11) solid;
+}
+/*====================================================*/
