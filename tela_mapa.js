@@ -1,5 +1,5 @@
 var mapa=[];
-var modalLote=[];
+
 
 function comandos(){
     var quantidade = document.getElementById("qntd").value;
@@ -92,7 +92,7 @@ msguva.value=0;
 
 var uva1 = document.createElement("option");
 tipoUva.appendChild(uva1);
-uva1.innerHTML="uva1";
+uva1.innerHTML="Cabernet Sauvignon";
 uva1.value=1;
 
 var uva2 = document.createElement("option");
@@ -105,6 +105,45 @@ tipoUva.appendChild(uva3);
 uva3.innerHTML="uva3";
 uva3.value=3;
 
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
+
+var uva3 = document.createElement("option");
+tipoUva.appendChild(uva3);
+uva3.innerHTML="uva3";
+uva3.value=3;
 var modalTxt2=document.createElement("fieldset");
 modalTxt2.id="modalTxt2";
 modalTxt2.innerHTML= "Hora da irrigação : ";
@@ -143,18 +182,68 @@ msgpraga.value=0;
 
 var praga1 = document.createElement("option");
 bichado2.appendChild(praga1);
-praga1.innerHTML="praga1";
+praga1.innerHTML="Ácaro";
 praga1.value=1;
 
 var praga2 = document.createElement("option");
 bichado2.appendChild(praga2);
-praga2.innerHTML="praga2";
+praga2.innerHTML="Filoxera";
 praga2.value=2;
 
 var praga3 = document.createElement("option");
 bichado2.appendChild(praga3);
-praga3.innerHTML="praga3";
+praga3.innerHTML="Nematoides";
 praga3.value=3;
+
+var praga4 = document.createElement("option");
+bichado2.appendChild(praga4);
+praga4.innerHTML="Pássaros ou outros animais";
+praga4.value=4;
+
+var praga5 = document.createElement("option");
+bichado2.appendChild(praga5);
+praga5.innerHTML="Mariposas";
+praga5.value=5;
+
+var praga6 = document.createElement("option");
+bichado2.appendChild(praga6);
+praga6.innerHTML="Mosca da fruta";
+praga6.value=6;
+
+var praga7 = document.createElement("option");
+bichado2.appendChild(praga7);
+praga7.innerHTML="Oídio e míldio";
+praga7.value=7;
+
+var praga8 = document.createElement("option");
+bichado2.appendChild(praga8);
+praga8.innerHTML="Botrytis";
+praga8.value=8;
+
+var praga4 = document.createElement("option");
+bichado2.appendChild(praga4);
+praga4.innerHTML="Esca";
+praga4.value=4;
+
+var praga9 = document.createElement("option");
+bichado2.appendChild(praga9);
+praga9.innerHTML="Mal de Pierce";
+praga9.value=9;
+
+var praga10 = document.createElement("option");
+bichado2.appendChild(praga10);
+praga10.innerHTML="Mancha vermelha";
+praga10.value=10;
+
+var praga12 = document.createElement("option");
+bichado2.appendChild(praga12);
+praga12.innerHTML="Galha da coroa";
+praga12.value=12;
+
+var praga13 = document.createElement("option");
+bichado2.appendChild(praga13);
+praga13.innerHTML="Flavescência dourada";
+praga13.value=13;
 /*====================================================*/
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -190,5 +279,4 @@ function time()
     document.getElementById('rodaPé').innerHTML=h+":"+m+":"+s+" "+D+"/"+(M+1)+"/"+A;
     setTimeout('time()',500);
 }
-
 
