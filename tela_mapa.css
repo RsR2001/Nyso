@@ -128,7 +128,7 @@ form {
   background-color: #fefefe;
   margin: auto;
   width: 66%;
-  height: 50%;
+  height: 57%;
   border-radius: 5px;
   border: 2px #000000 double; 
   overflow: auto;
@@ -150,25 +150,28 @@ form {
 #modalTxt1{
   border-radius: 5px;
   border: 2px #000000 solid ;
-  padding-inline: 115px;
+  padding-inline: 119px;
   padding-block: 5px;
 }
 #modalTxt2{
   border-radius: 5px;
   border: 2px #000000 solid ;
-  padding-inline: 134px;
+  padding-inline: 140px;
 }
 #modalTxt3{
   border-radius: 5px;
   border: 2px #000000 solid ;
-  padding-inline: 89px;
+  padding-inline: 96px;
 }
 #modalTxt4{
   border-radius: 5px;
   border: 2px #000000 solid ;
   padding-inline: 10px;
   padding-block: 7px;
-
+}
+#modalTxt5{
+  border-radius: 5px;
+  border: 2px #000000 solid ;
 }
 select{
   border-radius: 5px;

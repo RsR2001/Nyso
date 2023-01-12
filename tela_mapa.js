@@ -97,53 +97,84 @@ uva1.value=1;
 
 var uva2 = document.createElement("option");
 tipoUva.appendChild(uva2);
-uva2.innerHTML="uva2";
+uva2.innerHTML="Merlot";
 uva2.value=2;
 
 var uva3 = document.createElement("option");
 tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
+uva3.innerHTML="Pinot Noir";
 uva3.value=3;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva4 = document.createElement("option");
+tipoUva.appendChild(uva4);
+uva4.innerHTML="Tannat";
+uva4.value=4;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva5 = document.createElement("option");
+tipoUva.appendChild(uva5);
+uva5.innerHTML="Cabernet Franc";
+uva5.value=5;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva6 = document.createElement("option");
+tipoUva.appendChild(uva6);
+uva6.innerHTML="Isabel";
+uva6.value=6;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva7 = document.createElement("option");
+tipoUva.appendChild(uva7);
+uva7.innerHTML="Bordô";
+uva7.value=7;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva8 = document.createElement("option");
+tipoUva.appendChild(uva8);
+uva8.innerHTML="Concord";
+uva8.value=8;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva9 = document.createElement("option");
+tipoUva.appendChild(uva9);
+uva9.innerHTML="Chardonnay";
+uva9.value=9;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva10 = document.createElement("option");
+tipoUva.appendChild(uva10);
+uva10.innerHTML="Moscato Branco";
+uva10.value=10;
 
-var uva3 = document.createElement("option");
-tipoUva.appendChild(uva3);
-uva3.innerHTML="uva3";
-uva3.value=3;
+var uva11 = document.createElement("option");
+tipoUva.appendChild(uva11);
+uva11.innerHTML="Riesling Itálico";
+uva11.value=11;
+
+var uva12 = document.createElement("option");
+tipoUva.appendChild(uva12);
+uva12.innerHTML="Trebbiano";
+uva12.value=12;
+
+var uva13 = document.createElement("option");
+tipoUva.appendChild(uva13);
+uva13.innerHTML="Glera/Prosecco";
+uva13.value=13;
+
+var uva14 = document.createElement("option");
+tipoUva.appendChild(uva14);
+uva14.innerHTML="Malvasia";
+uva14.value=14;
+
+var uva15 = document.createElement("option");
+tipoUva.appendChild(uva15);
+uva15.innerHTML="Niagara";
+uva15.value=15;
+
+var uva16 = document.createElement("option");
+tipoUva.appendChild(uva16);
+uva16.innerHTML="Moscato Embrapa";
+uva16.value=16;
+
+var uva17 = document.createElement("option");
+tipoUva.appendChild(uva17);
+uva17.innerHTML="Lorena BRS";
+uva17.value=17;
+
 var modalTxt2=document.createElement("fieldset");
 modalTxt2.id="modalTxt2";
 modalTxt2.innerHTML= "Hora da irrigação : ";
@@ -244,6 +275,27 @@ var praga13 = document.createElement("option");
 bichado2.appendChild(praga13);
 praga13.innerHTML="Flavescência dourada";
 praga13.value=13;
+
+var modalTxt5=document.createElement("fieldset");
+modalTxt5.id="modalTxt5";
+modalTxt5.innerHTML= "Pronto para colhêr : ";
+lote.appendChild(modalTxt5);
+
+var colherSim = document.createElement("spam");
+colherSim.id = "colherSim";
+colherSim.classList="btn-add"
+colherSim.innerHTML = "⭕️";
+colherSim.onclick = pronto;
+modalTxt5.appendChild(colherSim);
+
+var colherNao = document.createElement("spam");
+colherNao.id = "colherNao";
+colherNao.classList="btn-add"
+colherNao.innerHTML = "❌";
+colherNao.onclick = aindaN;
+modalTxt5.appendChild(colherNao);
+
+
 /*====================================================*/
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -253,19 +305,20 @@ window.onclick = function(event) {
   /*========================modal body==========================*/
 /*================= modal da info===================================*/
 
-
-
-
-mapa.push("lote"+i);
-console.log(mapa);
 /*====================================================*/ 
 function informacao(){  
     modal.style.display= "block";
 }
-    } 
-   
+    }
+    function pronto() {
+    lote.style.backgroundColor="green";
+    }
+    function aindaN() {
+      lote.style.backgroundColor="red";
+      }
 }
-    
+mapa.push("lote"+i);
+console.log(mapa);
 }
 function time()
 {
