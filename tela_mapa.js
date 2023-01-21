@@ -293,22 +293,22 @@ praga13.value=13;
 
 var modalTxt5=document.createElement("fieldset");
 modalTxt5.id="modalTxt5";
-modalTxt5.innerHTML= "Pronto para colhêr : ";
-lote.appendChild(modalTxt5);
+modalTxt5.innerHTML= "Salvar Informações: ";
+modalMain.appendChild(modalTxt5);
 
-var colherSim = document.createElement("spam");
-colherSim.id = "colherSim";
-colherSim.classList="btn-add"
-colherSim.innerHTML = "⭕️";
-colherSim.onclick = pronto;
-modalTxt5.appendChild(colherSim);
+var salvarSim = document.createElement("spam");
+salvarSim.id = "salvarSim";
+salvarSim.classList="btn-add"
+salvarSim.innerHTML = "⭕️";
+salvarSim.onclick = pronto;
+modalTxt5.appendChild(salvarSim);
 
-var colherNao = document.createElement("spam");
-colherNao.id = "colherNao";
-colherNao.classList="btn-add"
-colherNao.innerHTML = "❌";
-colherNao.onclick = aindaN;
-modalTxt5.appendChild(colherNao);
+var salvarNao = document.createElement("spam");
+salvarNao.id = "salvarNao";
+salvarNao.classList="btn-add"
+salvarNao.innerHTML = "❌";
+salvarNao.onclick = aindaN;
+modalTxt5.appendChild(salvarNao);
 
 
 /*====================================================*/
@@ -321,14 +321,7 @@ window.onclick = function(event) {
   /*========================modal body==========================*/
 /*================= modal da info===================================*/
 
-idLoteArray.push("lote :"+contador);
-uvaArray.push("Tipo de uva :"+tipoUva.value);
-regarArray.push("Hora da irrigação :"+regar.value);
-aduboArray.push("Data adubagem :"+adubado.value);
-data.push("Data relato :"+bichado1.value);
-tipo.push("tipo praga :"+bichado2.value);
-mapaArray.push(loteArray);
-console.table(loteArray);
+
 
 /*====================================================*/ 
 function informacao(){  
@@ -336,11 +329,24 @@ function informacao(){
 }
 
 function pronto() {
-  lote.style.backgroundColor="green";
+  var i=0;
+ if(i<=0){
+  idLoteArray.push("lote :"+contador);
+  uvaArray.push("Tipo de uva :"+tipoUva.value);
+  regarArray.push("Hora da irrigação :"+regar.value);
+  aduboArray.push("Data adubagem :"+adubado.value);
+  data.push("Data relato :"+bichado1.value);
+  tipo.push("tipo praga :"+bichado2.value);
+  mapaArray.push(loteArray);
+  console.table(loteArray);
+  i++;
+ }else{
+  console.log(mapaArray)
+ }
 }
 
 function aindaN() {
-  lote.style.backgroundColor="red";
+ console.log(mapaArray)
 }
 
 function regado() {
