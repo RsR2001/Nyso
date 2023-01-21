@@ -6,8 +6,9 @@ var loteArray=[
   aduboArray=[],
   data=[],
   tipo=[] 
-]
+];
 
+var contador = 0;
 
 var contador = 0;
 
@@ -320,16 +321,15 @@ window.onclick = function(event) {
   /*========================modal body==========================*/
 /*================= modal da info===================================*/
 
-
-
 idLoteArray.push("lote :"+contador);
 uvaArray.push("Tipo de uva :"+tipoUva.value);
 regarArray.push("Hora da irrigação :"+regar.value);
 aduboArray.push("Data adubagem :"+adubado.value);
 data.push("Data relato :"+bichado1.value);
-tipo.push("tipo praga :"+bichado2.value)
+tipo.push("tipo praga :"+bichado2.value);
 mapaArray.push(loteArray);
-  console.table(loteArray);
+console.table(loteArray);
+
 /*====================================================*/ 
 function informacao(){  
   modalInfo.style.display= "block";
@@ -347,7 +347,8 @@ function regado() {
   let alterar = document.getElementById("regar");
   h=today.getHours();
   m=today.getMinutes();
-
+  let h=today.getHours();
+  let m=today.getMinutes();
   alert (alterar.value)
 }
 function adubo() {
