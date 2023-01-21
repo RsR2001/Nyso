@@ -1,40 +1,50 @@
-var mapa=[];
+var mapaArray=[];
+var loteArray=[
+  idLoteArray=[],
+  uvaArray=[],
+  regarArray=[],
+  aduboArray=[],
+  data=[],
+  tipo=[] 
+]
 
+
+var contador = 0;
 
 function comandos(){
-    var quantidade = document.getElementById("qntd").value;
-    if (quantidade==0){
-        alert("insira uma quantidade")
-    }else{       
-        for (var i = 0; i < quantidade; i++) {  
-            var tabela_mapa =document.getElementById("mapa");   
-            var tabela_lote = document.createElement("table");    
-            tabela_lote.id="tabela_lote";
-            tabela_lote.classList.add("table-shadow");
-            tabela_mapa.appendChild(tabela_lote);      
-            var lote = document.createElement("th");
-            tabela_lote.appendChild(lote);
-            lote.id = "Lote";
-            var img = document.createElement("IMG");
-            img.src = "https://i.imgur.com/Bx3FEK3.png";
-            img.style.width = "80px";
-            img.style.height = "80px";
-            lote.appendChild(img);
+  var tabela_mapa =document.getElementById("mapa");   
+  var div = document.createElement("div"); 
+  tabela_mapa.appendChild(div);
+
+  var tabela_lote = document.createElement("table");    
+  tabela_lote.id="tabela_lote";
+  tabela_lote.classList.add("table-shadow");
+  div.appendChild(tabela_lote);
+
+  var lote = document.createElement("th");
+  tabela_lote.appendChild(lote);
+  lote.id = "Lote";
+  var img = document.createElement("IMG");
+  img.src = "https://i.imgur.com/Bx3FEK3.png";
+  img.style.width = "80px";
+  img.style.height = "80px";
+  lote.appendChild(img);
+/*====================================================*/
+            var irrigado = document.createElement("th","button");
+            irrigado.id = "irrigado";
+            irrigado.classList="btn-add"
+            irrigado.innerHTML = "🚰";
+            lote.appendChild(irrigado);
+            irrigado.onclick = regado;
 /*====================================================*/
             var adubagem = document.createElement("th","button");
-            adubagem.id = "adubo";
+            adubagem.id = "adubagem";
             adubagem.classList="btn-add"
             adubagem.innerHTML = "🌱";
             lote.appendChild(adubagem);
 /*====================================================*/
-            var irrigado = document.createElement("th","button");
-            irrigado.id = "regado";
-            irrigado.classList="btn-add"
-            irrigado.innerHTML = "🚰";
-            lote.appendChild(irrigado);
-/*====================================================*/
             var praga = document.createElement("th","button");
-            praga.id = "infestado";
+            praga.id = "praga";
             praga.classList="btn-add"
             praga.innerHTML = "🐜";
             lote.appendChild(praga);
@@ -45,21 +55,19 @@ function comandos(){
             lote.appendChild(info);
             info.style.cursor="Pointer";
             info.onclick = informacao;
-
-
-
 /*================= modal da info===================================*/
 var modalInfo = document.createElement("div");
 modalInfo.id="modalInfo";
 modalInfo.classList="modalInfo";
-tabela_mapa.appendChild(modalInfo);
+div.appendChild(modalInfo);
+
 var modalConteudo =  document.createElement("div");
 modalConteudo.id="modalConteudo";
 modalInfo.appendChild(modalConteudo);
-var modal = document.getElementById("modalInfo");
+
 /*========================modal body==========================*/
 var modalHeader =document.createElement("div");
-modalHeader.innerHTML=modalInfo.classList;
+modalHeader.innerHTML="lote"+contador;
 modalHeader.id="modalHeader";
 modalConteudo.appendChild(modalHeader);
 
@@ -69,7 +77,7 @@ modalBtnX.innerHTML= "&times";
 modalBtnX.style.cursor="Pointer";
 modalHeader.appendChild(modalBtnX);
 modalBtnX.onclick = function() {
-modal.style.display = "none";
+modalInfo.style.display = "none";
   }
 /*====================================================*/
 
@@ -83,6 +91,8 @@ modalTxt1.innerHTML= "Tipo da uva : ";
 modalMain.appendChild(modalTxt1);
 
 var tipoUva = document.createElement("select");
+tipoUva.id="tipoUva";
+tipoUva.name="tipoUva";
 modalTxt1.appendChild(tipoUva);
 
 var msguva = document.createElement("option");
@@ -181,6 +191,7 @@ modalTxt2.innerHTML= "Hora da irrigação : ";
 modalMain.appendChild(modalTxt2);
 
 var regar= document.createElement("input");
+regar.id="regar";
 regar.type="time";
 modalTxt2.appendChild(regar);
 
@@ -190,6 +201,7 @@ modalTxt3.innerHTML= "Dia em que foi adubado : ";
 modalMain.appendChild(modalTxt3);
 
 var adubado= document.createElement("input");
+adubado.id="adubado";
 adubado.type="date";
 adubado.min="2022-01-01";
 modalTxt3.appendChild(adubado);
@@ -200,10 +212,12 @@ modalTxt4.innerHTML= "Presenças de pragas : ";
 modalMain.appendChild(modalTxt4);
 
 var bichado1= document.createElement("input");
+bichado1.id="bichado1";
 bichado1.type="date";
 bichado1.min="2022-01-01";
 modalTxt4.appendChild(bichado1);
 var bichado2= document.createElement("select");
+bichado2.id="bichado2";
 modalTxt4.appendChild(bichado2);
 
 var msgpraga = document.createElement("option");
@@ -298,27 +312,50 @@ modalTxt5.appendChild(colherNao);
 
 /*====================================================*/
 window.onclick = function(event) {
+  var modal= document.getElementById("modalInfo")
     if (event.target == modal) {
-      modal.style.display = "none";
+      modalInfo.style.display = "none";
     }
   }
   /*========================modal body==========================*/
 /*================= modal da info===================================*/
 
+
+
+idLoteArray.push("lote :"+contador);
+uvaArray.push("Tipo de uva :"+tipoUva.value);
+regarArray.push("Hora da irrigação :"+regar.value);
+aduboArray.push("Data adubagem :"+adubado.value);
+data.push("Data relato :"+bichado1.value);
+tipo.push("tipo praga :"+bichado2.value)
+mapaArray.push(loteArray);
+  console.table(loteArray);
 /*====================================================*/ 
 function informacao(){  
-    modal.style.display= "block";
+  modalInfo.style.display= "block";
 }
-    }
-    function pronto() {
-    lote.style.backgroundColor="green";
-    }
-    function aindaN() {
-      lote.style.backgroundColor="red";
-      }
+
+function pronto() {
+  lote.style.backgroundColor="green";
 }
-mapa.push("lote"+i);
-console.log(mapa);
+
+function aindaN() {
+  lote.style.backgroundColor="red";
+}
+
+function regado() {
+  let alterar = document.getElementById("regar");
+  h=today.getHours();
+  m=today.getMinutes();
+
+  alert (alterar.value)
+}
+function adubo() {
+}
+function infestado() {
+}
+/*====================================================*/ 
+contador++;
 }
 function time()
 {
@@ -332,4 +369,3 @@ function time()
     document.getElementById('rodaPé').innerHTML=h+":"+m+":"+s+" "+D+"/"+(M+1)+"/"+A;
     setTimeout('time()',500);
 }
-
