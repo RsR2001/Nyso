@@ -138,3 +138,26 @@ footer{
 .carousel-inner{
   text-align: center;
 }
+.caract{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.caract h3{
+  font-size: 40px;
+  color: red;
+  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.caract h4{
+  font-size: 35px;
+  color: #fff;
+  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.caract h5{
+  font-size: 25px;
+  color: #fff;
+  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.img1{
+
+}
