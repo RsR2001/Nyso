@@ -31,25 +31,6 @@ function comandos(){
   img.style.height = "80px";
   lote.appendChild(img);
 /*====================================================*/
-            var irrigado = document.createElement("th","button");
-            irrigado.id = "irrigado";
-            irrigado.classList="btn-add"
-            irrigado.innerHTML = "🚰";
-            lote.appendChild(irrigado);
-            irrigado.onclick = regado;
-/*====================================================*/
-            var adubagem = document.createElement("th","button");
-            adubagem.id = "adubagem";
-            adubagem.classList="btn-add"
-            adubagem.innerHTML = "🌱";
-            lote.appendChild(adubagem);
-/*====================================================*/
-            var praga = document.createElement("th","button");
-            praga.id = "praga";
-            praga.classList="btn-add"
-            praga.innerHTML = "🐜";
-            lote.appendChild(praga);
-/*====================================================*/
             var info= document.createElement("spam");
             info.innerHTML="ℹ️";
             info.id="detalhes";
@@ -329,8 +310,13 @@ function informacao(){
 }
 
 function pronto() {
-  var i=0;
- if(i<0){
+  idLoteArray.pop();
+  uvaArray.pop();
+    regarArray.pop();
+    aduboArray.pop();
+    data.pop();
+    tipo.pop();
+    mapaArray.pop();
   idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
   regarArray.push("Hora da irrigação :"+regar.value);
@@ -338,39 +324,12 @@ function pronto() {
   data.push("Data relato :"+bichado1.value);
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
-  console.table(loteArray);  
- }else if(i>0){
-  idLoteArray.pop();
-  uvaArray.pop();
-    regarArray.pop();
-    aduboArray.pop();
-    data.pop();
-    tipo.pop();
-    loteArray.pop();
-    mapaArray.pop();
-  console.table(mapaArray);
-  
- }
- i++;
- console.log(i);
+  console.table(loteArray);
 }
 
 function aindaN() {
  console.log(mapaArray)
 
-}
-
-function regado() {
-  let alterar = document.getElementById("regar");
-  h=today.getHours();
-  m=today.getMinutes();
-  let h=today.getHours();
-  let m=today.getMinutes();
-  alert (alterar.value)
-}
-function adubo() {
-}
-function infestado() {
 }
 /*====================================================*/ 
 contador++;
