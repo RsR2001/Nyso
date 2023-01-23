@@ -330,7 +330,7 @@ function informacao(){
 
 function pronto() {
   var i=0;
- if(i<=0){
+ if(i<0){
   idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
   regarArray.push("Hora da irrigação :"+regar.value);
@@ -338,15 +338,30 @@ function pronto() {
   data.push("Data relato :"+bichado1.value);
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
-  console.table(loteArray);
+  console.table(mapaArray);
+  console.log(i);
   i++;
- }else{
-  console.log(mapaArray)
  }
+ 
+ else if(i>0){
+  idLoteArray.pop();
+  uvaArray.pop();
+    regarArray.pop();
+    aduboArray.pop();
+    data.pop();
+    tipo.pop();
+    loteArray.pop();
+    mapaArray.pop();
+  console.table(mapaArray);
+  console.log(i);
+  i--;
+ }
+ 
 }
 
 function aindaN() {
  console.log(mapaArray)
+
 }
 
 function regado() {
