@@ -35,7 +35,7 @@ header{
 }
 .menu{
   width: 50%;
-  padding-right: 50px;
+  padding-right: 50px ;
 }
 .menu nav a{
   color: whitesmoke;
@@ -65,7 +65,7 @@ footer{
   bottom: 0;
   left: 0;
   right: 0;
-  background: #black;
+  background: black;
   height: auto;
   width: 100vw;
   padding-top: 40px;
@@ -112,10 +112,10 @@ footer{
   transition: color .4s ease;
 }
 .socials a:hover i{
-    color: aqua;
+    color: red;
 }
 .footer-bottom{
-  background: #black;
+  background: black;
   width: 100vw;
   padding: 20px 0;
   text-align: center;
@@ -129,4 +129,12 @@ footer{
   text-transform: uppercase;
   opacity: .4;
   font-weight: 200;
+}
+#carouselExampleInterval{
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel-inner{
+  text-align: center;
 }
