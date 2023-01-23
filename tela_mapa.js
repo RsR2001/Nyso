@@ -338,12 +338,8 @@ function pronto() {
   data.push("Data relato :"+bichado1.value);
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
-  console.table(mapaArray);
-  console.log(i);
-  i++;
- }
- 
- else if(i>0){
+  console.table(loteArray);  
+ }else if(i>0){
   idLoteArray.pop();
   uvaArray.pop();
     regarArray.pop();
@@ -353,10 +349,10 @@ function pronto() {
     loteArray.pop();
     mapaArray.pop();
   console.table(mapaArray);
-  console.log(i);
-  i--;
+  
  }
- 
+ i++;
+ console.log(i);
 }
 
 function aindaN() {
