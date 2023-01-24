@@ -68,7 +68,7 @@ footer{
   background: black;
   height: auto;
   width: 100vw;
-  padding-top: 40px;
+  padding-top: 10px;
   color: #fff;
 }
 .foooter-content{
@@ -87,7 +87,7 @@ footer{
 }
 .footer-content p{
   max-width: 500px;
-  margin: 10px auto;
+  margin: 2px auto;
   line-height: 20px;
   font-size: 14px;
   text-align: center;
@@ -124,6 +124,7 @@ footer{
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
+  margin: 5px auto;
 }
 .footer-bottom span{
   text-transform: uppercase;
@@ -139,25 +140,37 @@ footer{
   text-align: center;
 }
 .caract{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  background-color: #111;
 }
-.caract h3{
+.caract div{
+  display: inline-block;
+}
+.caract h2{
+  text-align: left;
   font-size: 40px;
   color: red;
-  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.caract h4{
-  font-size: 35px;
+.caract h1{
+  text-align: left;
+  font-size: 50px;
   color: #fff;
   font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .caract h5{
-  font-size: 25px;
-  color: #fff;
-  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+  font-size: 20px;
 }
-.img1{
-
+.caract img{
+  width:300px;
+  height:300px;
+  position: ;
+}
+.caract a{
+    text-align: left;
+    padding: 10px 45px;
+    background-color: #2c2c2c;
+    border: 1px solid #2c2c2c;
+    color: #ffffff;
+    text-decoration: none;
 }
