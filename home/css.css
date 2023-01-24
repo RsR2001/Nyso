@@ -132,7 +132,7 @@ footer{
   font-weight: 200;
 }
 #carouselExampleInterval{
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -165,7 +165,7 @@ footer{
 .caract img{
   width:300px;
   height: 300px;
-  vertical-align: 5px;
+  vertical-align: 30px;
 }
 .caract a{
     text-align: left;
