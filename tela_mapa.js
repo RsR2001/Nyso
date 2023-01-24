@@ -306,7 +306,7 @@ function informacao(){
   modalInfo.style.display= "block";
 }
 function pronto() {
-  if(contador>mapaArray.length){
+  if(contador<=mapaArray.length){
     alert("aaa")
   idLoteArray.pop();
   uvaArray.pop();
@@ -324,7 +324,7 @@ function pronto() {
   mapaArray.push(loteArray);
   console.table(loteArray);
 
-  }else if(contador<=mapaArray.length){
+  }else if(contador>mapaArray.length){
     alert("bbb")
     idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
