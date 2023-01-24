@@ -323,7 +323,8 @@ function pronto() {
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
   console.table(loteArray);
-  }else if(contador<mapaArray.length){
+
+  }else if(contador<=mapaArray.length){
     alert("bbb")
     idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
@@ -340,7 +341,7 @@ function pronto() {
 function aindaN() {
  console.log(mapaArray)
  console.log(contador)
- console.log(i)
+
 }
 /*====================================================*/ 
 contador++;
