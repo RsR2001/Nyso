@@ -1,17 +1,14 @@
-var mapaArray=[];
-var loteArray=[
-  idLoteArray=[],
-  uvaArray=[],
-  regarArray=[],
-  aduboArray=[],
-  data=[],
-  tipo=[] 
-];
 
-var contador = 0;
-
-var contador = 0;
-
+  var contador = 0;
+  var mapaArray=[];
+  var loteArray=[
+    idLoteArray=[],
+    uvaArray=[],
+    regarArray=[],
+    aduboArray=[],
+    data=[],
+    tipo=[] 
+  ];
 function comandos(){
   var tabela_mapa =document.getElementById("mapa");   
   var div = document.createElement("div"); 
@@ -308,8 +305,9 @@ window.onclick = function(event) {
 function informacao(){  
   modalInfo.style.display= "block";
 }
-
 function pronto() {
+  if(contador>mapaArray.length){
+    alert("aaa")
   idLoteArray.pop();
   uvaArray.pop();
     regarArray.pop();
@@ -317,7 +315,7 @@ function pronto() {
     data.pop();
     tipo.pop();
     mapaArray.pop();
-  idLoteArray.push("lote :"+contador);
+    idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
   regarArray.push("Hora da irrigação :"+regar.value);
   aduboArray.push("Data adubagem :"+adubado.value);
@@ -325,11 +323,24 @@ function pronto() {
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
   console.table(loteArray);
+  }else if(contador<mapaArray.length){
+    alert("bbb")
+    idLoteArray.push("lote :"+contador);
+  uvaArray.push("Tipo de uva :"+tipoUva.value);
+  regarArray.push("Hora da irrigação :"+regar.value);
+  aduboArray.push("Data adubagem :"+adubado.value);
+  data.push("Data relato :"+bichado1.value);
+  tipo.push("tipo praga :"+bichado2.value);
+  mapaArray.push(loteArray);
+  console.table(loteArray);
+  }
+  
 }
 
 function aindaN() {
  console.log(mapaArray)
-
+ console.log(contador)
+ console.log(i)
 }
 /*====================================================*/ 
 contador++;
