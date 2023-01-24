@@ -172,6 +172,7 @@ modalMain.appendChild(modalTxt2);
 var regar= document.createElement("input");
 regar.id="regar";
 regar.type="time";
+regar.name="regar"
 modalTxt2.appendChild(regar);
 
 var modalTxt3=document.createElement("fieldset");
@@ -183,6 +184,7 @@ var adubado= document.createElement("input");
 adubado.id="adubado";
 adubado.type="date";
 adubado.min="2022-01-01";
+adubado.name= "adubado"
 modalTxt3.appendChild(adubado);
 
 var modalTxt4=document.createElement("fieldset");
@@ -194,9 +196,11 @@ var bichado1= document.createElement("input");
 bichado1.id="bichado1";
 bichado1.type="date";
 bichado1.min="2022-01-01";
+bichado1.name="bichado Nome"
 modalTxt4.appendChild(bichado1);
 var bichado2= document.createElement("select");
 bichado2.id="bichado2";
+bichado2.name="bichado dado"
 modalTxt4.appendChild(bichado2);
 
 var msgpraga = document.createElement("option");
