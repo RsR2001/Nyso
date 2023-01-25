@@ -1,17 +1,14 @@
-var mapaArray=[];
-var loteArray=[
-  idLoteArray=[],
-  uvaArray=[],
-  regarArray=[],
-  aduboArray=[],
-  data=[],
-  tipo=[] 
-];
 
-var contador = 0;
-
-var contador = 0;
-
+  var contador = 0;
+  var mapaArray=[];
+  var loteArray=[
+    idLoteArray=[],
+    uvaArray=[],
+    regarArray=[],
+    aduboArray=[],
+    data=[],
+    tipo=[] 
+  ];
 function comandos(){
   var tabela_mapa =document.getElementById("mapa");   
   var div = document.createElement("div"); 
@@ -30,25 +27,6 @@ function comandos(){
   img.style.width = "80px";
   img.style.height = "80px";
   lote.appendChild(img);
-/*====================================================*/
-            var irrigado = document.createElement("th","button");
-            irrigado.id = "irrigado";
-            irrigado.classList="btn-add"
-            irrigado.innerHTML = "🚰";
-            lote.appendChild(irrigado);
-            irrigado.onclick = regado;
-/*====================================================*/
-            var adubagem = document.createElement("th","button");
-            adubagem.id = "adubagem";
-            adubagem.classList="btn-add"
-            adubagem.innerHTML = "🌱";
-            lote.appendChild(adubagem);
-/*====================================================*/
-            var praga = document.createElement("th","button");
-            praga.id = "praga";
-            praga.classList="btn-add"
-            praga.innerHTML = "🐜";
-            lote.appendChild(praga);
 /*====================================================*/
             var info= document.createElement("spam");
             info.innerHTML="ℹ️";
@@ -194,6 +172,7 @@ modalMain.appendChild(modalTxt2);
 var regar= document.createElement("input");
 regar.id="regar";
 regar.type="time";
+regar.name="regar"
 modalTxt2.appendChild(regar);
 
 var modalTxt3=document.createElement("fieldset");
@@ -205,6 +184,7 @@ var adubado= document.createElement("input");
 adubado.id="adubado";
 adubado.type="date";
 adubado.min="2022-01-01";
+adubado.name= "adubado"
 modalTxt3.appendChild(adubado);
 
 var modalTxt4=document.createElement("fieldset");
@@ -216,9 +196,11 @@ var bichado1= document.createElement("input");
 bichado1.id="bichado1";
 bichado1.type="date";
 bichado1.min="2022-01-01";
+bichado1.name="bichado Nome"
 modalTxt4.appendChild(bichado1);
 var bichado2= document.createElement("select");
 bichado2.id="bichado2";
+bichado2.name="bichado dado"
 modalTxt4.appendChild(bichado2);
 
 var msgpraga = document.createElement("option");
@@ -327,11 +309,17 @@ window.onclick = function(event) {
 function informacao(){  
   modalInfo.style.display= "block";
 }
-
 function pronto() {
-  var i=0;
- if(i<=0){
-  idLoteArray.push("lote :"+contador);
+  if(contador<=mapaArray.length){
+    alert("aaa")
+  idLoteArray.pop();
+  uvaArray.pop();
+    regarArray.pop();
+    aduboArray.pop();
+    data.pop();
+    tipo.pop();
+    mapaArray.pop();
+    idLoteArray.push("lote :"+contador);
   uvaArray.push("Tipo de uva :"+tipoUva.value);
   regarArray.push("Hora da irrigação :"+regar.value);
   aduboArray.push("Data adubagem :"+adubado.value);
@@ -339,27 +327,25 @@ function pronto() {
   tipo.push("tipo praga :"+bichado2.value);
   mapaArray.push(loteArray);
   console.table(loteArray);
-  i++;
- }else{
-  console.log(mapaArray)
- }
+
+  }else if(contador>mapaArray.length){
+    alert("bbb")
+    idLoteArray.push("lote :"+contador);
+  uvaArray.push("Tipo de uva :"+tipoUva.value);
+  regarArray.push("Hora da irrigação :"+regar.value);
+  aduboArray.push("Data adubagem :"+adubado.value);
+  data.push("Data relato :"+bichado1.value);
+  tipo.push("tipo praga :"+bichado2.value);
+  mapaArray.push(loteArray);
+  console.table(loteArray);
+  }
+  
 }
 
 function aindaN() {
  console.log(mapaArray)
-}
+ console.log(contador)
 
-function regado() {
-  let alterar = document.getElementById("regar");
-  h=today.getHours();
-  m=today.getMinutes();
-  let h=today.getHours();
-  let m=today.getMinutes();
-  alert (alterar.value)
-}
-function adubo() {
-}
-function infestado() {
 }
 /*====================================================*/ 
 contador++;
